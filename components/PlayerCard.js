@@ -18,7 +18,7 @@ function PlayerCard({ playerObj, onUpdate }) {
       <Card.Body>
         <Card.Title>{playerObj.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{playerObj.position}</Card.Subtitle>
-        <Link href="/" passHref>
+        <Link href={`/players/${playerObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">
             VIEW
           </Button>

@@ -15,11 +15,10 @@ const initialState = {
 export default function PlayerForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
   const { user } = useAuth();
-  const [players, setPlayers] = useState([]);
   const router = useRouter();
 
   useEffect(() => {
-    getPlayers(user.uid).then(setPlayers);
+    getPlayers(user.uid);
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
@@ -52,29 +51,18 @@ export default function PlayerForm({ obj }) {
       <FloatingLabel controlId="floatingInput3" label="Player Image" className="mb-3">
         <Form.Control type="url" placeholder="Enter an image URL" name="image" value={formInput.image} onChange={handleChange} required />
       </FloatingLabel>
-      {/* <FloatingLabel controlId="floatingInput3" label="Position" className="mb-3">
-        <Form.Control type="text" placeholder="Enter Player's Position" name="position" value={formInput.position} onChange={handleChange} required />
-      </FloatingLabel> */}
       <FloatingLabel controlId="floatingSelect" label="Position">
-        <Form.Select aria-label="position" name="position" onChange={handleChange} className="mb-3" required>
-          <option value="">Select a Position</option>
-          {players.map((player) => (
-            <option key={player.firebaseKey} value={player.position} selected={player.position}>
-              {player.position}
-            </option>
-          ))}
+        <Form.Select aria-label="position" name="position" value={obj.position} onChange={handleChange} className="mb-3" required>
+          <option disabled selected key="empty" value="">
+            Select a Position
+          </option>
+          <option value="Center">Center</option>
+          <option value="Point Guard">Point Guard</option>
+          <option value="Shooting Guard">Shooting Guard</option>
+          <option value="Power Forward">Power Forward</option>
+          <option value="Small Forward">Small Forward</option>
         </Form.Select>
       </FloatingLabel>
-      {/* <FloatingLabel controlId="floatingSelect" label="Position">
-        <Form.Select aria-label="position" name="position" value={formInput.position} onChange={handleChange} className="mb-3" required>
-          <option>Select A Position</option>
-          <option value="Center">Center</option>
-          <option value="Center">Point Guard</option>
-          <option value="Center">Power Forward</option>
-          <option value="Center">Small Forward</option>
-          <option value="Center">Shooting Guard</option>
-        </Form.Select>
-      </FloatingLabel> */}
 
       <Button type="submit">{obj.firebaseKey ? 'Update' : 'Add'} Player</Button>
     </Form>
