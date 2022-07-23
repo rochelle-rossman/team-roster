@@ -1,0 +1,96 @@
+
+{
+  "players": {
+    "-N7WZQR41mPuEXIkc8bj": {
+      "firebaseKey": "-N7WZQR41mPuEXIkc8bj",
+      "image": "https://a.espncdn.com/i/headshots/wnba/players/full/2988756.png",
+      "name": "Roze Reavell",
+      "position": "Shooting Guard",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQR54rsciGVTSwYP": {
+      "firebaseKey": "-N7WZQR54rsciGVTSwYP",
+      "image": "https://b.fssta.com/uploads/application/wnba/headshots/186.vresize.350.350.medium.59.png",
+      "name": "Dew Tzarkov",
+      "position": "Center",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQR7c05Ahipo5JRC": {
+      "firebaseKey": "-N7WZQR7c05Ahipo5JRC",
+      "image": "https://www.hoopfeed.com/content/wp-content/uploads/2017/06/TiffanyHayes2017headshot.png",
+      "name": "Wallace Klesse",
+      "position": "Small Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRVVq3CsKXpsTyI": {
+      "firebaseKey": "-N7WZQRVVq3CsKXpsTyI",
+      "image": "https://a.espncdn.com/i/headshots/wnba/players/full/1068.png",
+      "name": "Quint Scade",
+      "position": "Power Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRsUkVCh5H8rhth": {
+      "firebaseKey": "-N7WZQRsUkVCh5H8rhth",
+      "image": "https://a.espncdn.com/i/headshots/wnba/players/full/4420318.png",
+      "name": "Merwin Mapledoram",
+      "position": "Small Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRteRA8B31mK7W8": {
+      "firebaseKey": "-N7WZQRteRA8B31mK7W8",
+      "image": "https://a.espncdn.com/i/headshots/wnba/players/full/4398779.png",
+      "name": "Nanice Wahncke",
+      "position": "Center",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRuxDBrj4ydcIdI": {
+      "firebaseKey": "-N7WZQRuxDBrj4ydcIdI",
+      "image": "https://www.hoopfeed.com/content/wp-content/uploads/2017/07/TinaCharles2017headshot.png",
+      "name": "Jacintha McColl",
+      "position": "Power Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRvcL1JKeAAqmXE": {
+      "firebaseKey": "-N7WZQRvcL1JKeAAqmXE",
+      "image": "https://a.espncdn.com/i/headshots/wnba/players/full/2491877.png",
+      "name": "Lynde Pentony",
+      "position": "Power Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRwvol5pHED7Mcv": {
+      "firebaseKey": "-N7WZQRwvol5pHED7Mcv",
+      "image": "https://assets-sports.thescore.com/basketball/player/102683/headshot.png",
+      "name": "Britta Crebbin",
+      "position": "Power Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRxa7A_XlRl6leV": {
+      "firebaseKey": "-N7WZQRxa7A_XlRl6leV",
+      "image": "https://b.fssta.com/uploads/application/wnba/headshots/139.vresize.350.350.medium.91.png",
+      "name": "Carolina Meader",
+      "position": "Small Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRysJ_EnpvYf8FB": {
+      "firebaseKey": "-N7WZQRysJ_EnpvYf8FB",
+      "image": "https://img.playerswiki.com/uploads/biography/2020/12/21/te-a-cooper-1608543172.jpg",
+      "name": "Nicolette Coleson",
+      "position": "Point Guard",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQRz4McgO_fWfbtV": {
+      "firebaseKey": "-N7WZQRz4McgO_fWfbtV",
+      "image": "https://b.fssta.com/uploads/application/wnba/headshots/151.vresize.350.350.medium.95.png",
+      "name": "Godfrey Rogier",
+      "position": "Small Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    },
+    "-N7WZQS-6dj2vapmiR5l": {
+      "firebaseKey": "-N7WZQS-6dj2vapmiR5l",
+      "image": "https://a.espncdn.com/i/headshots/wnba/players/full/4066553.png",
+      "name": "Alisun Donlon",
+      "position": "Small Forward",
+      "uid": "Yb67LUx22QPOpJ6d44sHD2eR1C13"
+    }
+  }
+}
