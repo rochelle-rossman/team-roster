@@ -18,5 +18,10 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: black;
+}
+
+.user-icon {
+  border-radius: 50%;
+  width: 30px;
 }
