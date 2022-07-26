@@ -25,3 +25,23 @@ body {
   border-radius: 50%;
   width: 30px;
 }
+
+#__next > div > div:nth-child(1) > div > div > img {
+  width: 96px;
+  height: 96px;
+  margin-top: 5px;
+}
+
+#__next > div > div:nth-child(1) > div > div {
+  align-items: center;
+  margin: 10px 0px 10px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.searchInput {
+  max-width: 60%;
+}
