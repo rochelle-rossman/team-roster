@@ -52,8 +52,8 @@ export default function PlayerForm({ obj }) {
         <Form.Control type="url" placeholder="Enter an image URL" name="image" value={formInput.image} onChange={handleChange} required />
       </FloatingLabel>
       <FloatingLabel controlId="floatingSelect" label="Position">
-        <Form.Select aria-label="position" name="position" value={obj.position} onChange={handleChange} className="mb-3" required>
-          <option disabled selected key="empty" value="">
+        <Form.Select name="position" value={formInput.position} onChange={handleChange} className="mb-3" required>
+          <option disabled value="">
             Select a Position
           </option>
           <option value="Center">Center</option>

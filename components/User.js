@@ -9,7 +9,7 @@ function User({
   return (
     <div>
       <Card style={{ width: '18rem' }} className="profile-card">
-        <Card.Img variant="top" src={image} alt={name} className="profile-img" />
+        <Card.Img variant="top" src={image} alt={name} className="profile-img " />
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{email}</Card.Text>
