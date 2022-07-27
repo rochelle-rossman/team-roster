@@ -45,3 +45,8 @@ body {
 .searchInput {
   max-width: 60%;
 }
+
+.btn {
+  margin: 5px;
+}
+

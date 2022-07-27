@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
-import { deletePlayer } from '../api/teamData';
+import { deletePlayer } from '../api/playerData';
 
 function PlayerCard({ playerObj, onUpdate }) {
   const deleteThisPlayer = () => {
@@ -40,6 +40,7 @@ PlayerCard.propTypes = {
     name: PropTypes.string,
     firebaseKey: PropTypes.string,
     position: PropTypes.string,
+    teamId: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

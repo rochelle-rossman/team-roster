@@ -3,9 +3,9 @@ import { clientCredentials } from '../utils/client';
 
 const dbUrl = clientCredentials.databaseURL;
 
-const getPlayers = (uid) => new Promise((resolve, reject) => {
+const getTeams = (uid) => new Promise((resolve, reject) => {
   axios
-    .get(`${dbUrl}/players.json?orderBy="uid"&equalTo="${uid}"`)
+    .get(`${dbUrl}/teams.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -16,40 +16,49 @@ const getPlayers = (uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const createPlayer = (playerObj, uid) => new Promise((resolve, reject) => {
+const createTeam = (teamObj, uid) => new Promise((resolve, reject) => {
   axios
-    .post(`${dbUrl}/players.json`, playerObj)
+    .post(`${dbUrl}/teams.json`, teamObj)
     .then((response) => {
       const payload = { firebaseKey: response.data.name };
-      axios.patch(`${dbUrl}/players/${response.data.name}.json`, payload).then(() => {
-        getPlayers(uid).then((playerArr) => resolve(playerArr));
+      axios.patch(`${dbUrl}/teams/${response.data.name}.json`, payload).then(() => {
+        getTeams(uid).then((playerArr) => resolve(playerArr));
       });
     })
     .catch((error) => reject(error));
 });
 
-const getSinglePlayer = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/players/${firebaseKey}.json`)
+const getSingleTeam = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .get(`${dbUrl}/teams/${firebaseKey}.json`)
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
 
-const updatePlayer = (playerObj) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/players/${playerObj.firebaseKey}.json`, playerObj)
-    .then(() => getPlayers(playerObj))
+const updateTeam = (teamObj) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${dbUrl}/teams/${teamObj.firebaseKey}.json`, teamObj)
+    .then(() => getTeams(teamObj))
     .then(resolve)
     .catch(reject);
 });
 
-const deletePlayer = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.delete(`${dbUrl}/players/${firebaseKey}.json`)
+const deleteTeam = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${dbUrl}/teams/${firebaseKey}.json`)
     .then(() => {
-      getPlayers();
+      getTeams();
     })
     .then(resolve)
     .catch(reject);
 });
 
+const getTeamsPlayers = (teamId) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/players.json?orderBy="teamId"&equalTo="${teamId}"`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch((error) => reject(error));
+});
+
 export {
-  getPlayers, createPlayer, getSinglePlayer, updatePlayer, deletePlayer,
+  getTeams, createTeam, getSingleTeam, updateTeam, deleteTeam, getTeamsPlayers,
 };

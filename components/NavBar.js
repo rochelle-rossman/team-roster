@@ -11,7 +11,7 @@ export default function NavBar() {
   const { user } = useAuth();
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
+      <Container className="navigation">
         <Link passHref href="/">
           <Navbar.Brand>🏀 TEAM ROSTER 🏀</Navbar.Brand>
         </Link>
@@ -20,10 +20,16 @@ export default function NavBar() {
           <Nav className="ml-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link>Players</Nav.Link>
             </Link>
             <Link passHref href="/players/new">
               <Nav.Link>Add Player</Nav.Link>
+            </Link>
+            <Link passHref href="../teams/teams">
+              <Nav.Link>Teams</Nav.Link>
+            </Link>
+            <Link passHref href="/teams/new">
+              <Nav.Link>Add Team</Nav.Link>
             </Link>
             <Link passHref href="/profile">
               <Nav.Link>

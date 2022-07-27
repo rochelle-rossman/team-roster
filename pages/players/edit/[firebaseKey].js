@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { getSinglePlayer } from '../../../api/teamData';
+import { getSinglePlayer } from '../../../api/playerData';
 import PlayerForm from '../../../components/PlayerForm';
 
 export default function EditPlayer() {
