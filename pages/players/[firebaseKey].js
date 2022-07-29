@@ -12,9 +12,10 @@ export default function ViewPlayer() {
   useEffect(() => {
     viewPlayerDetails(firebaseKey).then(setPlayerStats);
   }, [firebaseKey]);
-  console.warn(playerStats);
 
   return (
-    <PlayerStatsTable statsObj={playerStats} />
+    <>
+      <PlayerStatsTable statsObj={playerStats.playerStats} />
+    </>
   );
 }

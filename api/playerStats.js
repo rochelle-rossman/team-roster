@@ -6,7 +6,13 @@ const dbUrl = clientCredentials.databaseURL;
 const getPlayersStats = (playerId) => new Promise((resolve, reject) => {
   axios
     .get(`${dbUrl}/playerStats.json?orderBy="playerId"&equalTo="${playerId}"`)
-    .then((response) => resolve(response.data))
+    .then((response) => {
+      if (response.data) {
+        resolve(Object.values(response.data));
+      } else {
+        resolve([]);
+      }
+    })
     .catch((error) => reject(error));
 });
 

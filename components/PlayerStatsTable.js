@@ -17,12 +17,12 @@ function PlayerStatsTable({ statsObj }) {
       </thead>
       <tbody>
         <tr>
-          <td>{statsObj.points}</td>
-          <td>{statsObj.assists}</td>
-          <td>{statsObj.blocks}</td>
-          <td>{statsObj.fouls}</td>
-          <td>{statsObj.rebounds}</td>
-          <td>{statsObj.steals}</td>
+          <td>{statsObj?.points}</td>
+          <td>{statsObj?.assists}</td>
+          <td>{statsObj?.blocks}</td>
+          <td>{statsObj?.fouls}</td>
+          <td>{statsObj?.rebounds}</td>
+          <td>{statsObj?.steals}</td>
         </tr>
       </tbody>
     </Table>
@@ -37,7 +37,12 @@ PlayerStatsTable.propTypes = {
     fouls: PropTypes.number,
     rebounds: PropTypes.number,
     steals: PropTypes.number,
-  }).isRequired,
+    firebaseKey: PropTypes.string,
+  }),
 };
 
+PlayerStatsTable.defaultProps = {
+  statsObj: {},
+
+};
 export default PlayerStatsTable;

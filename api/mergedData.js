@@ -5,7 +5,7 @@ import { deleteTeam, getTeamsPlayers } from './teamData';
 const viewPlayerDetails = (playerFirebaseKey) => new Promise((resolve, reject) => {
   Promise.all([getSinglePlayer(playerFirebaseKey), getPlayersStats(playerFirebaseKey)])
     .then(([playerObj, statsObj]) => {
-      resolve({ playerObj, ...statsObj });
+      resolve({ playerObj, playerStats: statsObj[0] });
     }).catch((error) => reject(error));
 });
 
