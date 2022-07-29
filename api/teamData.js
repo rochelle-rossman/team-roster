@@ -53,8 +53,8 @@ const deleteTeam = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getTeamsPlayers = (teamId) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/players.json?orderBy="teamId"&equalTo="${teamId}"`)
+const getTeamsPlayers = (teamName) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/players.json?orderBy="teamId"&equalTo="${teamName}"`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });

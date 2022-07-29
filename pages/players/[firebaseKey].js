@@ -1,27 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { getSinglePlayer } from '../../api/playerData';
+import { viewPlayerDetails } from '../../api/mergedData';
+import PlayerStatsTable from '../../components/PlayerStatsTable';
 
 export default function ViewPlayer() {
-  const [playerDetails, setPlayerDetails] = useState({});
+  const [playerStats, setPlayerStats] = useState({});
   const router = useRouter();
   const { firebaseKey } = router.query;
 
   useEffect(() => {
-    getSinglePlayer(firebaseKey).then(setPlayerDetails);
+    viewPlayerDetails(firebaseKey).then(setPlayerStats);
   }, [firebaseKey]);
 
   return (
-    <div className="mt-5 d-flex flex-wrap">
-      <div className="text-white ms-5 details">
-        <img src={playerDetails.image} alt={playerDetails.name} width="400px" />
-        <h1>
-          {playerDetails.name}
-        </h1>
-        <hr />
-        <h5>{playerDetails.position}</h5>
-      </div>
-    </div>
+    <>
+      <PlayerStatsTable statsObj={playerStats.playerStats} />
+    </>
   );
 }
