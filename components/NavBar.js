@@ -26,10 +26,13 @@ export default function NavBar() {
               <Nav.Link>Add Player</Nav.Link>
             </Link>
             <Link passHref href="../teams/teams">
-              <Nav.Link>Teams</Nav.Link>
+              <Nav.Link>Your Teams</Nav.Link>
             </Link>
             <Link passHref href="/teams/new">
               <Nav.Link>Add Team</Nav.Link>
+            </Link>
+            <Link passHref href="../teams/publicTeams">
+              <Nav.Link>Public Teams</Nav.Link>
             </Link>
             <Link passHref href="/profile">
               <Nav.Link>
