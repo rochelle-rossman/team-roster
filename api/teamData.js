@@ -59,6 +59,19 @@ const getTeamsPlayers = (teamName) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const getPublicTeams = () => new Promise((resolve, reject) => {
+  axios
+    .get(`${dbUrl}/teams.json?orderBy="public"&equalTo=true`)
+    .then((response) => {
+      if (response.data) {
+        resolve(Object.values(response.data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch((error) => reject(error));
+});
+
 export {
-  getTeams, createTeam, getSingleTeam, updateTeam, deleteTeam, getTeamsPlayers,
+  getTeams, createTeam, getSingleTeam, updateTeam, deleteTeam, getTeamsPlayers, getPublicTeams,
 };

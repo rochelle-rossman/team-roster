@@ -53,3 +53,7 @@ body {
 .form-check-label {
   color: white;
 }
+
+.noShow{
+  display: none;
+}

@@ -4,8 +4,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { deleteTeamsPlayers } from '../api/mergedData';
+import { useAuth } from '../utils/context/authContext';
 
 function TeamCard({ teamObj, onUpdate }) {
+  const { user } = useAuth();
   const deleteThisTeam = () => {
     if (window.confirm(`Delete ${teamObj.teamName}?`)) {
       deleteTeamsPlayers(teamObj.firebaseKey).then(() => onUpdate());
@@ -23,9 +25,11 @@ function TeamCard({ teamObj, onUpdate }) {
           </Button>
         </Link>
         <Link href={`/teams/edit/${teamObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          <Button className={teamObj.uid !== user.uid ? 'noShow' : ''} variant="info">
+            EDIT
+          </Button>
         </Link>
-        <Button variant="danger" className="m-2" onClick={deleteThisTeam}>
+        <Button className={teamObj.uid !== user.uid ? 'noShow' : ''} variant="danger" onClick={deleteThisTeam}>
           DELETE
         </Button>
       </Card.Body>
@@ -39,6 +43,7 @@ TeamCard.propTypes = {
     teamName: PropTypes.string,
     firebaseKey: PropTypes.string,
     public: PropTypes.bool,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
