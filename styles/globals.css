@@ -72,6 +72,10 @@ h5, h4, h2 {
   font-family: 'Press Start 2P', cursive;
  }
 
+ h4{
+  margin-top: 10px;
+ }
+
  .statsPage {
 display: flex;
 flex-direction: column;
