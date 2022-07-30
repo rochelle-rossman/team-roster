@@ -16,4 +16,12 @@ const getPlayersStats = (playerId) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// const updatePlayerStats = (statsObj) => new Promise((resolve, reject) => {
+//   axios
+//     .patch(`${dbUrl}/playerStats/${statsObj.firebaseKey}.json`, statsObj)
+//     .then(() => getPlayersStats(statsObj.firebaseKey))
+//     .then(resolve)
+//     .catch(reject);
+// });
+
 export default getPlayersStats;

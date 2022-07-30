@@ -16,7 +16,9 @@ export default function ViewPlayer() {
 
   return (
     <div className="statsPage">
-      <SinglePlayer statsObj={playerStats.playerObj} />
+      <div>
+        <SinglePlayer statsObj={playerStats.playerObj} />
+      </div>
       <PlayerStatsTable statsObj={playerStats.playerStats} />
     </div>
   );
