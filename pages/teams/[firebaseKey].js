@@ -13,13 +13,12 @@ export default function ViewTeam() {
     viewTeamDetails(firebaseKey).then(setTeamDetails);
   }, [firebaseKey]);
   return (
-    <div className="mt-5 d-flex flex-wrap justify-content-center">
+    <div className="team-details">
       <div className="text-white ms-5 details">
         <h5>
           TEAM'S PLAYERS
         </h5>
         <hr />
-        <h5>{teamDetails.public ? 'PUBLIC' : ''}</h5>
       </div>
       {teamDetails.players?.map((player) => (
         <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={setTeamDetails} />

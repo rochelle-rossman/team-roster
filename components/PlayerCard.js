@@ -22,16 +22,16 @@ function PlayerCard({ playerObj, onUpdate }) {
         <Card.Title>{playerObj?.name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{playerObj?.position}</Card.Subtitle>
         <Link href={`/players/${playerObj?.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">
+          <Button variant="outline-dark" className="m-2">
             VIEW
           </Button>
         </Link>
         <Link href={`/players/edit/${playerObj?.firebaseKey}`} passHref>
-          <Button className={playerObj.uid !== user.uid ? 'noShow' : ''} variant="info">
+          <Button className={playerObj.uid !== user.uid ? 'noShow' : ''} variant="outline-dark">
             EDIT
           </Button>
         </Link>
-        <Button className={playerObj.uid !== user.uid ? 'noShow' : ''} variant="danger" onClick={deleteThisPlayer}>
+        <Button className={playerObj.uid !== user.uid ? 'noShow' : ''} variant="outline-danger" onClick={deleteThisPlayer}>
           DELETE
         </Button>
       </Card.Body>

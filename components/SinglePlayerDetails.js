@@ -1,16 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
 
 function SinglePlayer({ statsObj }) {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={statsObj?.image} />
-      <Card.Body>
-        <Card.Title>{statsObj?.name}</Card.Title>
-        <Card.Text>{statsObj?.position}</Card.Text>
-      </Card.Body>
-    </Card>
+    <>
+      <img src={statsObj?.image} alt={statsObj?.name} className="playerDetailsImage" />
+      <h4>{statsObj?.position}</h4>
+      <h2>{statsObj?.name}'s Season Stats</h2>
+    </>
   );
 }
 

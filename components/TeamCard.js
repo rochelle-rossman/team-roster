@@ -20,16 +20,16 @@ function TeamCard({ teamObj, onUpdate }) {
       <Card.Body>
         <Card.Title>{teamObj.teamName}</Card.Title>
         <Link href={`/teams/${teamObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">
+          <Button variant="outline-dark" className="m-2">
             VIEW
           </Button>
         </Link>
         <Link href={`/teams/edit/${teamObj.firebaseKey}`} passHref>
-          <Button className={teamObj.uid !== user.uid ? 'noShow' : ''} variant="info">
+          <Button className={teamObj.uid !== user.uid ? 'noShow' : ''} variant="outline-dark">
             EDIT
           </Button>
         </Link>
-        <Button className={teamObj.uid !== user.uid ? 'noShow' : ''} variant="danger" onClick={deleteThisTeam}>
+        <Button className={teamObj.uid !== user.uid ? 'noShow' : ''} variant="outline-danger" onClick={deleteThisTeam}>
           DELETE
         </Button>
       </Card.Body>
